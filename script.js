@@ -7,12 +7,30 @@ document.addEventListener('DOMContentLoaded', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 40);
   });
 
-  burger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-  });
+  function setMenuOpen(open) {
+    navLinks.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+  }
+
+  burger.addEventListener('click', () => setMenuOpen(!navLinks.classList.contains('open')));
 
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('open'));
+    link.addEventListener('click', () => setMenuOpen(false));
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+      setMenuOpen(false);
+      burger.focus();
+    }
+  });
+
+  document.addEventListener('click', event => {
+    if (!burger.contains(event.target) && !navLinks.contains(event.target)) setMenuOpen(false);
+  });
+
+  window.matchMedia('(min-width: 769px)').addEventListener('change', event => {
+    if (event.matches) setMenuOpen(false);
   });
 
   const observer = new IntersectionObserver((entries) => {
@@ -58,8 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const item = btn.parentElement;
       const wasOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-      if (!wasOpen) item.classList.add('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        i.querySelector('.faq-answer').hidden = true;
+      });
+      if (!wasOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        item.querySelector('.faq-answer').hidden = false;
+      }
     });
   });
 });

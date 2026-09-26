@@ -20,6 +20,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
+section[id], #download { scroll-margin-top: 72px; }
 
 body {
   font-family: "Segoe UI Variable", "Segoe UI", -apple-system, sans-serif;
@@ -229,8 +230,7 @@ section { padding: 100px 0; }
 .faq-question:hover { background: rgba(255,255,255,0.03); }
 .faq-chevron { transition: transform 0.3s; flex-shrink: 0; margin-left: 12px; }
 .faq-item.open .faq-chevron { transform: rotate(180deg); }
-.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; }
-.faq-item.open .faq-answer { max-height: 300px; }
+.faq-answer[hidden] { display: none; }
 .faq-answer p { padding: 0 20px 18px; font-size: 14px; color: var(--text-muted); line-height: 1.7; }
 
 /* ---- CTA ---- */

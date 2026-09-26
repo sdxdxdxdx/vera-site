@@ -22,7 +22,7 @@
       <a href="#faq">FAQ</a>
       <a href="#download" class="nav-cta">Скачать</a>
     </div>
-    <button class="burger" id="burger" aria-label="Меню">
+    <button class="burger" id="burger" aria-label="Меню" aria-controls="navLinks" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -256,47 +256,47 @@
     <h2 class="section-title reveal">Частые вопросы</h2>
     <div class="faq-list">
       <div class="faq-item reveal">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
           <span>Нужен ли интернет после активации?</span>
           <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-answer">
+        <div class="faq-answer" id="faq-answer-1" hidden>
           <p>Для самой активации — да: Vera сверяет подпись сервера, поэтому отозванный ключ перестает работать. После проверки приложение до 7 дней работает офлайн, а подпись ключа верифицируется локально на вашем ПК.</p>
         </div>
       </div>
       <div class="faq-item reveal">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
           <span>Как обновиться с версии 2.0?</span>
           <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-answer">
+        <div class="faq-answer" id="faq-answer-2" hidden>
           <p>Просто скачайте и запустите установщик 3.2 — старая версия заменится автоматически. Если лицензия не подхватилась, возьмите ключ в боте (/keys) и вставьте в разделе «Лицензия».</p>
         </div>
       </div>
       <div class="faq-item reveal">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
           <span>Можно ли перенести лицензию на другой ПК?</span>
           <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-answer">
+        <div class="faq-answer" id="faq-answer-3" hidden>
           <p>Лицензия привязана к коду одного устройства. Для переноса обратитесь к администратору бота — он отзовёт старый ключ и выдаст новый для другого ПК.</p>
         </div>
       </div>
       <div class="faq-item reveal">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
           <span>Что такое Telegram Stars?</span>
           <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-answer">
+        <div class="faq-answer" id="faq-answer-4" hidden>
           <p>Это внутренняя валюта Telegram для цифровых товаров. Пополняется через магазин приложений (iOS/Android) или через бота @Stars. Оплата происходит прямо в диалоге с ботом Vera.</p>
         </div>
       </div>
       <div class="faq-item reveal">
-        <button class="faq-question">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
           <span>Безопасно ли применять твики?</span>
           <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
         </button>
-        <div class="faq-answer">
+        <div class="faq-answer" id="faq-answer-5" hidden>
           <p>Да. Каждое изменение записывается в журнал и может быть откачено в один клик. Твики помечены уровнем риска (низкий/средний/высокий), чтобы вы понимали последствия.</p>
         </div>
       </div>
