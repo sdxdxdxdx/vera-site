@@ -1,1 +1,1 @@
-{"latest": "3.2.2", "notes": "Обновление теперь ставится прямо из приложения. Новый ключ активируется сразу, даже если ещё не успел попасть в реестр.", "url": "https://github.com/sdxdxdxdx/vera-site/releases/download/v3.2.2/VeraSetup-3.2.2.exe"}
+{"latest": "3.2.2", "notes": "Обновление теперь ставится прямо из приложения. Новый ключ активируется сразу, даже если ещё не успел попасть в реестр.", "url": "https://github.com/sdxdxdxdx/vera-site/releases/download/v3.2.2/VeraSetup-3.2.2.exe", "state_url": "https://vera-license-cdn.vera-app.workers.dev/license_state.json"}
