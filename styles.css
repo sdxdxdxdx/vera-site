@@ -87,7 +87,7 @@ body {
   33% { transform: translate(30px, -20px) scale(1.05); }
   66% { transform: translate(-20px, 15px) scale(0.95); }
 }
-.hero-content { position: relative; z-index: 2; max-width: 720px; }
+.hero-content { position: relative; z-index: 2; max-width: 1000px; }
 .hero-badge {
   display: inline-block; padding: 6px 16px; border-radius: 20px;
   background: rgba(124, 92, 255, 0.15); border: 1px solid rgba(124, 92, 255, 0.3);
@@ -99,7 +99,7 @@ body {
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.hero-sub { font-size: 18px; color: var(--text-muted); max-width: 540px; margin: 0 auto 32px; line-height: 1.7; }
+.hero-sub { font-size: 18px; color: var(--text-muted); max-width: 620px; margin: 0 auto 32px; line-height: 1.7; }
 .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
 .hero-meta { font-size: 13px; color: var(--text-muted); }
 
@@ -201,7 +201,11 @@ section { padding: 100px 0; }
 .step-arrow { color: var(--text-muted); opacity: 0.4; }
 
 /* ---- PRICING ---- */
-.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; align-items: start; }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; align-items: start; }
+.price-card.free .price-value { color: var(--accent-light); }
+.price-note { text-align: center; color: var(--text-muted); font-size: 15px; margin-top: 28px; }
+.price-note a, .faq-answer a { color: var(--accent-light); }
+.hero-sub q { quotes: "«" "»"; color: #fff; }
 .price-card { padding: 32px; text-align: center; position: relative; }
 .price-card.popular { border-color: rgba(124,92,255,0.4); box-shadow: 0 0 40px rgba(124,92,255,0.1); }
 .popular-badge {
@@ -213,7 +217,7 @@ section { padding: 100px 0; }
 .price-period { font-size: 13px; color: var(--text-muted); }
 .price-value { font-size: 42px; font-weight: 800; margin: 20px 0; color: #ffd75e; }
 .price-value .star { font-size: 28px; }
-.price-value .price-alt { font-size: 15px; font-weight: 500; color: var(--text-muted); }
+.price-value .price-alt { display: block; margin-top: 6px; font-size: 15px; font-weight: 500; color: var(--text-muted); }
 .price-features { list-style: none; text-align: left; margin-bottom: 24px; }
 .price-features li { padding: 8px 0; font-size: 14px; color: var(--text-muted); border-bottom: 1px solid var(--border); }
 .price-features li::before { content: "✓ "; color: var(--green); font-weight: 700; }
